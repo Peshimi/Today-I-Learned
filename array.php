@@ -17,5 +17,16 @@ if (empty($kotek_potrzebuje["jedzonko"])) {
 else {
     echo "Trzeba iść do sklepu po konserwę";
 }
+echo "<br>";
+if (empty($kotek_potrzebuje["iść do weterynarza!"])){
+    array_push($kotek_potrzebuje, "iść do weterynarza!");
+    print_r($kotek_potrzebuje);
+    echo "<br>";
+    echo "Jeśli kotek wymaga wizyty kontrolnej to idziemy, niezwłocznie";
+}
+else {
+    echo "On nie jest chory, tylko głodny!!!";
+}
+
 
 ?>
