@@ -10,6 +10,11 @@ var_dump(count($kotek_potrzebuje));
 print_r(count($cechy_kotka));
 echo "<br>";
 
+#zmienić wartość klucza można wykonać w następujący sposób:
+$shrek_movie = array("Shrek" => "31", "Fiona" => "25", "Puss in boots" => "2", "Donkey" => "19");
+$shrek_movie["Puss in boots"] = 4;
+print_r($shrek_movie);
+
 #możemy sprawdzić czy jakiś konkretny element znajduje się w tablicy, np używyjąc krótkiego warunku z 'empty'
 if (empty($kotek_potrzebuje["jedzonko"])) {
     echo "Kotek dostanie smaczne jedzenie";
@@ -27,6 +32,25 @@ if (empty($kotek_potrzebuje["iść do weterynarza!"])){
 else {
     echo "On nie jest chory, tylko głodny!!!";
 }
+echo "<br>";
 
+#tablice można posortować na kilka sposobów
+$pets = array("psy", "koty", "słonie", "węże", "aligatory", "papugi", "gepardy", "jeże");
+#sort posurtuje alfabetycznie od A-Z
+#rsort posortuje alfabetycznie ale od Z-A *reverse=>odwrotnie
+rsort($pets);
+$clength = count($pets);
+for($m=0; $m < $clength; $m++) {
+    echo $pets[$m];
+    echo "<br>";
+}
+#asort posortuje według wartości *according to value => to ($key_value)
+#ksort posortuje według klucza according to key => ($key)
+#arsort i krsort analogicznie sortują według wartości/ klucza ale w przeciwnej kolejności
+ksort($cechy_kotka);
+foreach($cechy_kotka as $key => $key_value) {
+    echo "Key= " . $key . ", " . "Value= " . $key_value;
+    echo "<br>"; 
+}
 
 ?>
