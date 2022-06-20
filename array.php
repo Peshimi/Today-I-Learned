@@ -45,12 +45,25 @@ for($m=0; $m < $clength; $m++) {
     echo "<br>";
 }
 #asort posortuje według wartości *according to value => to ($key_value)
-#ksort posortuje według klucza according to key => ($key)
-#arsort i krsort analogicznie sortują według wartości/ klucza ale w przeciwnej kolejności
+#ksort posortuje według klucza *according to key => ($key)
+#arsort / krsort analogicznie sortują według wartości/ klucza ale w przeciwnej kolejności
 ksort($cechy_kotka);
 foreach($cechy_kotka as $key => $key_value) {
     echo "Key= " . $key . ", " . "Value= " . $key_value;
     echo "<br>"; 
 }
+
+#strlen => zliczy wszystkie znaki w stringu
+$cow = "I am a cow, I am cow, I'm not a cat, I don't say meow";
+echo strlen($cow); 
+#dlaczego to tu piszę, w tym pliku miało być przecież o nadprzyrodzonej potędze * tablicy *
+#między innymi dzięki funkcji 'explode' możemy rozbić string na tablice... przydatne, co nie?
+#w pojedynczym cudzysłowiu wpisujemy separator, czyli co funkcja ma uznać za wartości tablicy EXPLODUJĄC STRING :D
+echo "<br>";
+print_r( explode(',', $cow) );
+print_r( explode(' ', $cow) );
+#przeciwieństwiem eksplozji będzie funkcja 'implode', której zadaniem będzie połączyć wartości w tablicy
+echo "<br>";
+echo implode(' | ', $kotek_potrzebuje);
 
 ?>
