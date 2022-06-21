@@ -25,3 +25,43 @@ else {
     echo "co ty teraz, przecież liczba $y jest większa od liczby $x!";
 }
 echo "<br>";
+
+#switch to rozbudowany warunek if'a; wykonuje kody w zależności od różnych przypadków zdefiowanych w instrukcji, 
+#w najprostrzym rozumieniu to taki typ warunku, w którym nie piszesz wielu if'ów i skracasz to do switch - case - break :>
+#przykład z użyciem if
+$z = 0;
+if ($z == 0) {
+    echo "'z' równa się 0";
+} elseif ($z == 1) {
+    echo "'z' równa się 1";
+} elseif ($z == 2) {
+    echo "'z' równa się 2";
+} #etc.
+#teraz ten sam kod ale z użyciem switch'a
+switch ($z) {
+    case 0:
+        echo "'z' równa się 0";
+        break;
+    case 1:
+        echo "'z' równa się 1";
+        break;
+    case 2:
+        echo "'z' równa się 2";
+        break;
+}
+#żeby była jasność, bez najmniejszego problemu możemy użyć string w warunku
+echo "<br>";
+$sweet = "choco cookie";
+switch ($sweet) {
+    case "hazelnut ice cream":
+        echo "I'm going to eat a hazelnut ice cream";
+        break;
+    case "choco cookie":
+        echo "I'm going to eat a choco cookie";
+        break;
+    case "apple pie":
+        echo "I'm going to eat an apple pie";
+        break;
+}
+echo "<br>";
+echo "Bon appetit!";
