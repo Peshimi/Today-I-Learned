@@ -57,7 +57,10 @@ switch ($sweet) {
         echo "I'm going to eat a hazelnut ice cream";
         break;
     case "choco cookie":
-        echo "I'm going to eat a choco cookie";
+        echo "I'm going to eat a choco cookie </br>";
+    case "choco me too":
+        echo "I come for choco cookies too!";
+        #w tym przykładzie dopóki: pierwszy warunek jest prawdą oraz po echo nie pojawiło się break- wszystkie linie się wyświetlą
         break;
     case "apple pie":
         echo "I'm going to eat an apple pie";
@@ -65,3 +68,10 @@ switch ($sweet) {
 }
 echo "<br>";
 echo "Bon appetit!";
+echo "<br>";
+
+#pętla while wykonuje warunek tak długo dopóki jest od prawdą
+while($z <= 100) {
+    $z+=10;
+    echo "Liczba: $z <br>";
+}
