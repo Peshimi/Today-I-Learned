@@ -98,6 +98,24 @@ do {
     }
     $s++;
 } while ($s <= 80);
+#wyjaśnimy sobie jeszcze na koniec jedną rzecz, a dokładnie różnice między operatorem '==' a '===':
+# == używam gdy operator ma sprawdzić czy typy danych (zmiennych) są sobie równe, jeśli tak to zwraca true, a jak nie to false
+# === operator ma to samo zadanie, ale w przypadku gdy typy danych są różne (ale mają te same wartości) to zwróci false
+#ciężko to przełożyć na ludzki, spróbuje zrobić jasne przykłady D: 
+$eq1 = "666";
+$eq2 = 666;
+var_dump($eq1 == $eq2);
+if ($eq1 == $eq2) {
+    echo "Equal" . "<br>";
+} else {
+    echo "Not Equal";
+} #wynik: bool(true) Equal
 
+var_dump($eq1 === $eq2);
+if ($eq1 === $eq2) {
+    echo "Equal" . "<br>";
+} else {
+    echo "not Equal";
+} #wynik bool(false) not Equal
 
 ?>
