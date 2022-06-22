@@ -137,5 +137,15 @@ for ($number = 0; $number <= 100; $number++) {
 echo $suma100 . ' ';
 echo $suma50 . ' ';
 
+#pętla foreach działa tylko na tablicach, pozwala napisać kod w oparciu o klucze i wartości w tablicach
+###polecam notatki array.php###
+$fruits = array("apple", "plum", "watermelon", "grapes", "kiwi", "orange", "dragonfruit");
+foreach ($fruits as $value) {
+    echo "$value <br>";
+}
+print_r($fruits) . "<br>";
+#dzięki pętli wszystko z tablicy wyświetli się tak jak ustawimy- jedno pod drugim, oddzielone znakami, posortowane etc.
+#z samym print_r owszem wyświetlimy tablicę ale domyślnie z kluczami i wartościami + ciężej tu modyfikować/ dawać warunki jak ma wyświetlić
+
 
 ?>
