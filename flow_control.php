@@ -112,10 +112,30 @@ if ($eq1 == $eq2) {
 } #wynik: bool(true) Equal
 
 var_dump($eq1 === $eq2);
-if ($eq1 === $eq2) {
+if ($eq1 === $eq2) {    
     echo "Equal" . "<br>";
 } else {
     echo "not Equal";
 } #wynik bool(false) not Equal
+
+#pętlę *for głównie używamy gdy potrzebujemy wykonać jakąś czynność określoną ilość razy
+for ($yay = 13; $yay >= 0; $yay--) {
+    echo $yay . ' ' . "<br>";
+}
+#teraz coś trudniejszego, dzięki pętli *for obliczę sumę liczb parzystych od 0 do 100, 
+#dodatkowo zliczę jeszcze sumę liczb nieparzystych od 0 do 50
+$suma100 = 0;
+$suma50 = 0;
+for ($number = 0; $number <= 100; $number++) {
+    if ($number % 2 == 0) {
+        $suma100 += $number;
+    }
+    if ($number % 2 == 1 && $number < 50) {
+        $suma50 += $number;
+    }
+}
+echo $suma100 . ' ';
+echo $suma50 . ' ';
+
 
 ?>
