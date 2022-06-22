@@ -70,8 +70,34 @@ echo "<br>";
 echo "Bon appetit!";
 echo "<br>";
 
-#pętla while wykonuje warunek tak długo dopóki jest od prawdą
-while($z <= 100) {
+#pętla *while wykonuje warunek tak długo dopóki jest on prawdą
+while($z <= 100) { #warunek będzie kontynuowany tak długo, jak zmienna x będzie mniejsza lub równa 100
     $z+=10;
     echo "Liczba: $z <br>";
 }
+$i = 20;
+while(!$i == 0) { #warunek się spełnia do momentu gdy zmienna nie równa się 0, gdy 0 == 0 to zwróci nam true i warunek się skończy
+    echo $i . "<br>";
+    $i = $i - 5;
+}
+
+#pętla *do while też tak jak w *while wykonuje warunek tak długo, dopóki jest od prawdą
+#różnica jest taka, że w *while wyrażenie jest sprawdzane dopiero po wykonaniu interakcji
+do {
+    echo $x . ' ';
+    $x++;
+} while ($x <= 10);
+echo "<br>";
+
+#pętla ma wyświetlić liczby nieparzyste z zakresu 20-40 oraz 60-80
+$s = 20;
+do { 
+    if ($s % 2 == 1) {
+        if ($s <= 40 || $s >= 60)
+            echo $s . ' ' . "<br>";
+    }
+    $s++;
+} while ($s <= 80);
+
+
+?>
