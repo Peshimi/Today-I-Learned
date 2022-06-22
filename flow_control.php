@@ -146,6 +146,14 @@ foreach ($fruits as $value) {
 print_r($fruits) . "<br>";
 #dzięki pętli wszystko z tablicy wyświetli się tak jak ustawimy- jedno pod drugim, oddzielone znakami, posortowane etc.
 #z samym print_r owszem wyświetlimy tablicę ale domyślnie z kluczami i wartościami + ciężej tu modyfikować/ dawać warunki jak ma wyświetlić
-
+#teraz stworzę pustą tabelę, pętla doda mi do niej wartości oraz wyświetli przy pomocy foreach
+echo "<br>";
+$june = array();
+for ($m = 0; $m < 31; $m++) {
+    $june[] = $m;
+}
+foreach($june as $days) {
+    echo $days . ' ';
+}
 
 ?>
