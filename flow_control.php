@@ -70,8 +70,90 @@ echo "<br>";
 echo "Bon appetit!";
 echo "<br>";
 
-#pętla while wykonuje warunek tak długo dopóki jest od prawdą
-while($z <= 100) {
+#pętla *while wykonuje warunek tak długo dopóki jest on prawdą
+while($z <= 100) { #warunek będzie kontynuowany tak długo, jak zmienna x będzie mniejsza lub równa 100
     $z+=10;
     echo "Liczba: $z <br>";
 }
+$i = 20;
+while(!$i == 0) { #warunek się spełnia do momentu gdy zmienna nie równa się 0, gdy 0 == 0 to zwróci nam true i warunek się skończy
+    echo $i . "<br>";
+    $i = $i - 5;
+}
+
+#pętla *do while też tak jak w *while wykonuje warunek tak długo, dopóki jest od prawdą
+#różnica jest taka, że w *while wyrażenie jest sprawdzane dopiero po wykonaniu interakcji
+do {
+    echo $x . ' ';
+    $x++;
+} while ($x <= 10);
+echo "<br>";
+
+#pętla ma wyświetlić liczby nieparzyste z zakresu 20-40 oraz 60-80
+$s = 20;
+do { 
+    if ($s % 2 == 1) {
+        if ($s <= 40 || $s >= 60)
+            echo $s . ' ' . "<br>";
+    }
+    $s++;
+} while ($s <= 80);
+#wyjaśnimy sobie jeszcze na koniec jedną rzecz, a dokładnie różnice między operatorem '==' a '===':
+# == używam gdy operator ma sprawdzić czy typy danych (zmiennych) są sobie równe, jeśli tak to zwraca true, a jak nie to false
+# === operator ma to samo zadanie, ale w przypadku gdy typy danych są różne (ale mają te same wartości) to zwróci false
+#ciężko to przełożyć na ludzki, spróbuje zrobić jasne przykłady D: 
+$eq1 = "666";
+$eq2 = 666;
+var_dump($eq1 == $eq2);
+if ($eq1 == $eq2) {
+    echo "Equal" . "<br>";
+} else {
+    echo "Not Equal";
+} #wynik: bool(true) Equal
+
+var_dump($eq1 === $eq2);
+if ($eq1 === $eq2) {    
+    echo "Equal" . "<br>";
+} else {
+    echo "not Equal";
+} #wynik bool(false) not Equal
+
+#pętlę *for głównie używamy gdy potrzebujemy wykonać jakąś czynność określoną ilość razy
+for ($yay = 13; $yay >= 0; $yay--) {
+    echo $yay . ' ' . "<br>";
+}
+#teraz coś trudniejszego, dzięki pętli *for obliczę sumę liczb parzystych od 0 do 100, 
+#dodatkowo zliczę jeszcze sumę liczb nieparzystych od 0 do 50
+$suma100 = 0;
+$suma50 = 0;
+for ($number = 0; $number <= 100; $number++) {
+    if ($number % 2 == 0) {
+        $suma100 += $number;
+    }
+    if ($number % 2 == 1 && $number < 50) {
+        $suma50 += $number;
+    }
+}
+echo $suma100 . ' ';
+echo $suma50 . ' ';
+
+#pętla foreach działa tylko na tablicach, pozwala napisać kod w oparciu o klucze i wartości w tablicach
+###polecam notatki array.php###
+$fruits = array("apple", "plum", "watermelon", "grapes", "kiwi", "orange", "dragonfruit");
+foreach ($fruits as $value) {
+    echo "$value <br>";
+}
+print_r($fruits) . "<br>";
+#dzięki pętli wszystko z tablicy wyświetli się tak jak ustawimy- jedno pod drugim, oddzielone znakami, posortowane etc.
+#z samym print_r owszem wyświetlimy tablicę ale domyślnie z kluczami i wartościami + ciężej tu modyfikować/ dawać warunki jak ma wyświetlić
+#teraz stworzę pustą tabelę, pętla doda mi do niej wartości oraz wyświetli przy pomocy foreach
+echo "<br>";
+$june = array();
+for ($m = 0; $m < 31; $m++) {
+    $june[] = $m;
+}
+foreach($june as $days) {
+    echo $days . ' ';
+}
+
+?>
