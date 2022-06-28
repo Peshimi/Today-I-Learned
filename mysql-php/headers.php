@@ -20,4 +20,11 @@ function minus($a, $b) {
     const result2 = <?php echo minus(22, 9)?> ;
     document.getElementById("header2").innerHTML = result2;
   </script>
+
+  <h1 id="header3"></h1>
+  <script>
+    const result3 = <?php require 'header3.php'; echo mnozenie(4); ?> ;
+    document.getElementById("header3").innerHTML = result3;
+  </script>
+
 </body>
