@@ -1,0 +1,119 @@
+1. <html></html>
+    -Tu zagnieżdżone są wszystkie inne znaczniki
+    ____________________________________________________________________________
+   <head></head>
+    -Informacje dla przeglądarki, importowanie plików CSS i JS
+    ____________________________________________________________________________
+   <body></body>
+    -Przede wszystkim zawartość strony widoczna w oknie przeglądarki
+
+2. <div></div>
+    -Może być: menu, banerem, tekstem, artykułem...
+    -"Kontener" dla innych znaczników
+    ____________________________________________________________________________
+   <section></section>
+    -Wyodrębnienie elementu strony
+    ____________________________________________________________________________
+   <span></span>
+    -Najczęściej używany do stylowania tekstu, pozwala odwoływać się do fragmentów (które obejmuje) i przypisywać im inny wygląd
+    -Podstawowy element blokowy
+    ____________________________________________________________________________
+   <p></p>
+    -Znacznik w którym powinniśmy przechowywać treść tekstową (p to skrót od paragraf)
+    Tekst umieszczony w znaczniku tworzy akapit- blok tekstu, zaczynający się w nowej linii
+    ____________________________________________________________________________
+   <h1></h1>
+    -Nagłówki, mogą być od h1 do h6, przykład wykorzystania:
+      <h1>Tytuł książki</h1>
+        <h2>Rozdział 1</h2>
+          <h3>Podrozdział 1</h3>
+          <p>Treść</p>
+          <h3>Podrozdział 2</h3>
+          <p>Treść</p>
+        <h2>Rozdział 2</h2>
+    ____________________________________________________________________________
+    <a href="#"></a>
+     -Służy do umieszczania linków/hiperłączy w dokumencie
+     -'href' to atrybut, który wskazuje, gdzie ma zostać przekierowany użytkownik
+    ____________________________________________________________________________
+    <img src="" alt="">
+     -'Kontener' na grafikę, znacznik tworzy przestrzeń na grafikę
+    ____________________________________________________________________________
+    <ul></ul>
+     -'Kontener' na listę nieuporządkowaną
+     -Aby umieścić elementy listy musimy wewnątrz stworzyć <ul></ul> dodać <li></li>
+     -Elementy listy są domyślnie kropkowane
+    ____________________________________________________________________________
+    <ol></ol>
+     -'Kontener' na listy uporządkowane, elementy listy <li></li> posiadają numer (cyfry arabskie)
+    ____________________________________________________________________________
+    <article></article>
+     -Stworzony na podstawie pogrupowanych tekstów, często ma tytuł np. <h1></h1>, autora i tekst
+    ____________________________________________________________________________
+
+3. <header></header>
+    -Najczęściej zagnieżdżony w <body></body>
+    -Reprezentuje wprowadzenie do głównego elementu: tytuł strony, baner, menu(nawigacje)
+    -Może wystąpić wielokrotnie na stronie
+    ____________________________________________________________________________
+   <main></main>
+    -Główna część strony, sekcji lub artykułu
+    ____________________________________________________________________________
+   <nav></nav>
+    -Powszechnie zwane menu, chodzi o skecje która zawiera zbiór linków do innej strony lub miejsc na stronie
+    -Najczęstrza budowa z navem:
+      <nav>
+        <ul>
+          <li> <a href="#"></a> </li>
+          <li> <a href="#"></a> </li>
+          ...more...
+        </ul>
+      </nav>
+    ____________________________________________________________________________
+    <aside></aside>
+     -Część strony lub sekcji, która jest wydzielona; często jako pasek boczny
+     -Może być wyodrębniona w <main></main> (np. jako ramka, dopisek z dodatkowymi informacjami)
+      lub być paskiem bocznym (wykorzystanym np. na reklamy, galerie itp.)
+    ____________________________________________________________________________
+    <footer></footer>
+     -Najczęściej jeden z elementów zagnieżdżony w <body></body>
+     -Tak zwana 'Stópka', umieszczamy tam najczęśniej informacje o prawach autorskich, kontakcie
+     -Może wystąpić wielokrotnie na stronie jako zakończenie danej sekcji
+    ____________________________________________________________________________
+
+4.  <strong></strong>
+     -W przypadku <p></p> jest zwykły tekst, a <strong></strong> jest 'wstawką w p' na ważne informacje;
+      domyślnie w przeglądarce jest pogrubiony
+     -<strong></strong> poza pogrubieniem mówi przeglądarce, że coś jest istotne, ważne
+     -Można również jako pogrubienie wykorzystać znacznik <b></b>
+     -Do użycia kursywy może posłużyć znacznik <i></i>
+    ____________________________________________________________________________
+    <em></em>
+     -Informacja niekoniecznie ważna, ale wyróżniona, także umieszczana w znaczniku <p></p>
+    ____________________________________________________________________________
+    <form></form>
+     -Znacznik, w którym umieszczamy formularze na stronie, przykład:
+      <form>
+          <label>Imię i nazwisko</label> #opis formularza
+          <input> #wygeneruje miejsce do wpisania tekstu
+          <button>Zatwierdź</button>
+      </form>
+    ____________________________________________________________________________
+    <br>
+     -Znacznik, który pozwala przejść do nowej linii; raczej nie używany w strukturze stron,
+      choć często pojawia się w edytorach tekstu w różnych CMS-ach
+    ____________________________________________________________________________
+
+
+ 5. Jak prawidłowo zbudować <head> strony internetowej
+   a) znacznik <meta>, który zawiera wyłącznie informaacje dla strony/przeglądarki internetowej
+      <meta name="description" content="#"> to element HTML podsumowujący stronę, wyszukiwarki wyświetlają go w wynikach wyszukiwania poniżej tagu tytułu
+      <meta name="author" content="#"> informacje o autorze w nagłówku
+      <meta name="keywords" content="#"> kluczowe słowa strony internetowej, użytkownik wyszukuje frazy w przeglądarce
+      <meta http-equiv="#" content="#"> informuje przeglądarke, by wyświetliła stronę w 'swojej' najnowszej wersji 
+      *wszystkie wymienione 'mety' wypisujemy między <meta charset="utf-8"> a <title></title>
+
+   b) umieszczamy znaczniki <style>/*...Style CSS*/</style> oraz <script>/*...Kod JavaScript'*/</script>
+
+   c) znacznik meta viewport
+      <meta name="viewport" content="#"> informuje urządzenia mobilne, że nasza strona jest także stworzona dla nich
