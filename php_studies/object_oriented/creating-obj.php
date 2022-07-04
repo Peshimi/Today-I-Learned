@@ -9,6 +9,10 @@ class User
 }
 
 $myObject = new User();
+$myObject->name = 'Nadia Lazarek';
+$myObject->username = '@nadialazarek';
+$myObject->followerCount = 100;
+
 print_r($myObject);
 
 ?>
